@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is not confused</title>
+</head>
+<body>
+    <h1>Hey I am Nazrul islam Suton</h1>
+
+
+    <script>
+        const normalPerson = {
+            name:"kuddus Ali",
+            getFullName:function(){
+                return "Mr " + this.name;
+            }
+        }
+
+        const generalPerson = {
+                    name:"sukkur Ali"
+        }
+
+        const friendlyPerson = {
+                    name:"hakku mia"
+        }
+        const seriousPerson = {
+                    name:"hakkus Ali"
+        }
+        generalPerson.getFullName = normalPerson.getFullName;
+        friendlyPerson.getFullName = normalPerson.getFullName;
+        seriousPerson.getFullName = normalPerson.getFullName;
+        console.log(generalPerson.getFullName());
+        console.log(friendlyPerson.getFullName());
+        console.log(seriousPerson.getFullName());
+    </script>
+</body>
+</html>
